@@ -22,7 +22,6 @@ best <- function(state, disease) {
   if (disease == "pneumonia") {
     minRate <- min(outcome$Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia[outcome$State == state]
                    ,na.rm = TRUE)
-    print(minRate)
     name <- outcome$Hospital.Name[outcome
                                   $Hospital.30.Day.Death..Mortality..Rates.from.Pneumonia == minRate 
                                   & outcome$State==state] 
